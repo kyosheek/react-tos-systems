@@ -1,0 +1,49 @@
+.card__info {
+  position: absolute;
+  height: 13px;
+  left: 20px;
+  top: 10px;
+
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 90.2%;
+  /* identical to box height, or 13px */
+
+
+  color: #858994;
+}
+
+.card__tag {
+  position: absolute;
+  height: 13px;
+  left: 20px;
+  bottom: 16px;
+
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 90.2%;
+  /* identical to box height, or 13px */
+
+
+  color: #858994;
+}
+
+.card__replies {
+  position: absolute;
+  height: 13px;
+  right: 20px;
+  bottom: 16px;
+
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 90.2%;
+  /* identical to box height, or 13px */
+
+  color: #858994;
+}

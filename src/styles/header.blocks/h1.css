@@ -1,0 +1,18 @@
+.h1 {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 90.2%;
+  /* or 22px */
+
+  color: #282D3C;
+}
+
+.header__logo {
+  position: relative;
+  width: 167px;
+  height: 66px;
+  left: 60px;
+  top: 20px;
+}

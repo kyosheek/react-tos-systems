@@ -1,0 +1,19 @@
+.action-bar__new-thread {
+  width: 260px;
+  height: 45px;
+
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 90.2%;
+  /* identical to box height, or 18px */
+
+  color: #FFFFFF;
+
+  background: #b89b72;
+  box-shadow: 0px 4px 4px rgba(85, 85, 85, 0.25);
+  border-radius: 6px;
+
+  border: none;
+}

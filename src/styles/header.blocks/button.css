@@ -1,0 +1,34 @@
+.header__section-button {
+  position: absolute;
+  top: 64px;
+  width: 145px;
+
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 90.2%;
+  /* identical to box height, or 22px */
+
+  color: #858994;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  padding-bottom: 18px;
+  padding-top: 5px;
+}
+
+.header__section-button:first-of-type {
+  left: 547px;
+}
+
+.header__section-button:nth-of-type(2) {
+  left: 752px;
+}
+
+.header__section-button_selected {
+  color: #282D3C;
+  border-bottom: 5px solid #B89B72;
+}

@@ -1,0 +1,12 @@
+.img {
+
+}
+
+.navbar__img {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  
+  width: 17px;
+  height: 18px;
+}

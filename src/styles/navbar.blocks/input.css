@@ -1,0 +1,24 @@
+.input {
+
+}
+
+.navbar__input {
+  position: absolute;
+  top: 0px;
+  left: 33px;
+
+  height: 30px;
+  width: 225px;
+  border: none;
+  outline: none;
+
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 90.2%;
+  /* or 16px */
+
+
+  color: #858994;
+}

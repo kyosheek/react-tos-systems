@@ -1,0 +1,22 @@
+{
+  "name": "react-tos-systems",
+  "version": "0.1.0",
+  "private": true,
+  "devtool": false,
+  "engines": {
+    "npm": 5.6.0,
+    "node": 8.9.4
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "0.9.x"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
