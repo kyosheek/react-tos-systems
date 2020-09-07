@@ -19,7 +19,7 @@
   position: absolute;
   height: 13px;
   left: 20px;
-  bottom: 16px;
+  bottom: 13px;
 
   font-family: Helvetica Neue;
   font-style: normal;
@@ -36,7 +36,7 @@
   position: absolute;
   height: 13px;
   right: 20px;
-  bottom: 16px;
+  bottom: 13px;
 
   font-family: Helvetica Neue;
   font-style: normal;
@@ -46,4 +46,25 @@
   /* identical to box height, or 13px */
 
   color: #858994;
+}
+
+.card__text {
+  position: absolute;
+  width: 540px;
+  left: 20px;
+  top: 69px;
+
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 121.2%;
+
+  color: #222222;
+
+  visibility: hidden;
+}
+
+.card__text-visible {
+  visibility: visible;
 }

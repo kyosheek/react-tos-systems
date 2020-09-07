@@ -31,7 +31,7 @@ class Forum extends Component {
         <div className="forum">
           <ActionBar />
           <CardsList />
-        </div> // forum
+        </div> {/* forum */}
       </ForumContext.Provider>
     );
   }

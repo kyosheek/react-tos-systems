@@ -59,6 +59,10 @@ class App extends Component {
   }
 
   render() {
+    const now = new Date();
+    console.log("now", now); // my del
+    console.log("now unix", now.getTime()); // my del
+    console.log("new date from now unix", new Date(now.getTime())); // my del
     return (
       <div className="App">
         <SectionContext.Provider value={ Object.assign({}, this.state.sectionContext) }>
