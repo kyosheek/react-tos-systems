@@ -9,7 +9,7 @@ export const tagsDict = {
   5: "Front-end",
   6: "Back-end",
   7: "Базы данных"
-}
+};
 
 export const ForumContext = React.createContext({
   selectedTagId: 0,

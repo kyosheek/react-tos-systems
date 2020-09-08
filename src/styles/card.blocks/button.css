@@ -9,6 +9,9 @@
   border-radius: 6px;
 
   margin-top: 20px;
+
+  -webkit-transition: -webkit-transform 2s;
+  transition: transform 2s;
 }
 
 .card:first-of-type {
@@ -17,4 +20,12 @@
 
 .card:last-of-type {
   margin-bottom: 20px;
+}
+
+.card-expanded {
+  height: auto;
+  position: absolute;
+  margin-top: 0px;
+  left: 0px;
+  top: 0px;
 }

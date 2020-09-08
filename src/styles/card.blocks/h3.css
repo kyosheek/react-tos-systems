@@ -1,8 +1,9 @@
 .card__theme {
-  position: absolute;
-  height: 16px;
-  left: 19px;
-  top: 33px;
+  position: relative;
+  text-align: left;
+
+  margin-left: 19px;
+  margin-top: 12px;
 
   font-family: Helvetica Neue;
   font-style: normal;
@@ -11,5 +12,5 @@
   line-height: 90.2%;
   /* or 16px */
 
-  color: #000000;
+  color: #444444;
 }

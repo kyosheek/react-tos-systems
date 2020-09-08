@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import '../../styles/card.blocks/master.css';
+import '../../styles/reply.blocks/master.css';
 
 import { tagsDict } from '../../context/ForumContext';
 
