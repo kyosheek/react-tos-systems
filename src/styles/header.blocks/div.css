@@ -32,7 +32,7 @@
   display: flex;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 850px) {
   .header__buttons_wrapper {
     margin-right: 10em;
   }

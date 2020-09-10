@@ -1,20 +1,27 @@
 .navbar {
   position: absolute;
-  width: 1440px;
+  width: 100vw;
   height: 58px;
   left: 0px;
   top: 113px;
 
   background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
 }
 
 .navbar__input-div {
-  position: absolute;
   width: 260px;
   height: 30px;
-  top: 14px;
-  right: 60px;
+  margin-top: 14px;
+  margin-right: 60px;
 
   border: 1px solid #b5b9c4;
   border-radius: 4px;
+}
+
+@media screen and (max-width: 850px) {
+  .navbar__input-div {
+    margin-right: 1em;
+  }
 }

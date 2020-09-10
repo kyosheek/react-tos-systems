@@ -10,9 +10,9 @@
 }
 
 .navbar__location {
-  position: absolute;
+  /* position: absolute; */
   width: 76px;
   height: 22px;
-  left: 60px;
-  top: 18px;
+  margin-left: 60px;
+  margin-top: 18px;
 }
