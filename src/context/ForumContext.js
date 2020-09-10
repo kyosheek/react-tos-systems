@@ -12,6 +12,7 @@ export const tagsDict = {
 };
 
 export const ForumContext = React.createContext({
+  creatingThread: false,
   selectedTagId: 0,
   changeTag: () => {}
 });

@@ -14,21 +14,30 @@ class Forum extends Component {
     super(props);
 
     this.state = {
-      selectedTagId: 0,
-      changeTag: this.changeTag
+      creatingThread: false,
+      forumContext: {
+        selectedTagId: 0,
+        changeTag: this.changeTag
+      }
     }
   }
 
   changeTag = (tagId) => {
+    let forumContextCopy = Object.assign({}, this.state.forumContext);
+    forumContextCopy.selectedTagId = Number(tagId);
     this.setState({
       ...this.state,
-      selectedTagId: tagId
+      forumContext: forumContextCopy
     })
+  }
+
+  createThread = () => {
+
   }
 
   render() {
     return (
-      <ForumContext.Provider value={ this.state }>
+      <ForumContext.Provider value={ Object.assign({}, this.state.forumContext) }>
         <div className="forum">
           <div className="forum__freespace"/>
           <CardsListConsumed />

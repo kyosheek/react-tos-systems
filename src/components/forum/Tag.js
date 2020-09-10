@@ -24,7 +24,7 @@ class Tag extends Component {
 
   render() {
     const { selectedTagId } = this.context;
-    const { tagId } = this.props;
+    const { tagId, text } = this.props;
     const tagClass = "button tag-button" +
       (Number(selectedTagId) === Number(tagId) ? " tag-button_selected" : "");
 
@@ -35,7 +35,7 @@ class Tag extends Component {
           <button
             className={tagClass}
             onClick={() => changeTag(tagId)}>
-            {this.props.text}
+            { text }
           </button>
         </div>
       )}

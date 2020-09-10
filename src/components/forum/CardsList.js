@@ -12,10 +12,8 @@ class CardsList extends Component {
   isIncludes = (cardData, ss) => (cardData.theme.toLowerCase().includes(ss) || cardData.who.toLowerCase().includes(ss) || cardData.text.toLowerCase().includes(ss));
 
   render() {
-    const { searchString } = this.props.searchContext;
-    const { selectedTagId } = this.props.forumContext;
-
-    const ss = searchString, sti = selectedTagId;
+    const ss = this.props.searchContext.searchString;
+    const sti = Number(this.props.forumContext.selectedTagId);
 
     let cardsList = [];
     for (let i = 0; i < 11; i++) {
