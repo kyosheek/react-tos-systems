@@ -1,0 +1,21 @@
+.forum {
+  width: 100vw;
+  position: relative;
+  display: flex;
+  margin-top: 40px;
+}
+
+.forum__freespace {
+  flex: 1 1 33%;
+}
+
+@media screen and (max-width: 850px) {
+  .forum__freespace {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .forum {
+  }
+}

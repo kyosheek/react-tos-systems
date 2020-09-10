@@ -1,7 +1,5 @@
 .card {
-  position: relative;
-
-  width: 579px;
+  width: 100%;
   height: 88px;
 
   background: #FFFFFF;
@@ -35,5 +33,5 @@
 }
 
 .card__hide_visible {
-  
+
 }

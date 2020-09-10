@@ -1,7 +1,13 @@
 .action-bar {
-  position: absolute;
-  width: 260px;
+  margin-right: 60px;
+  margin-left: 60px;
+  flex: 1 2 260px;
+  max-width: 260px;
   height: 369px;
-  left: 1120px;
-  top: 210px;  
+}
+
+@media screen and (max-width: 850px) {
+  .action-bar {
+    margin-right: 1em;
+  }
 }

@@ -1,6 +1,11 @@
 .cards-list {
-  position: absolute;
-  width: 579px;
-  left: 481px;
-  top: 210px;
+  flex: 1 1 40.3%;
+  min-width: 250px;
+  margin: 0;
+}
+
+@media screen and (max-width: 850px) {
+  .cards-list {
+    margin-left: 60px;
+  }
 }

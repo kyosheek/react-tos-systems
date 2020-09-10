@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import '../App.css';
 import '../styles/common.blocks/master.css';
+import '../styles/forum.blocks/master.css';
 
 import ActionBar from './forum/ActionBar';
 import { CardsListConsumed } from '../context/ConsumedElements';
@@ -29,9 +30,9 @@ class Forum extends Component {
     return (
       <ForumContext.Provider value={ this.state }>
         <div className="forum">
-          <div />
-          <ActionBar />
+          <div className="forum__freespace"/>
           <CardsListConsumed />
+          <ActionBar />
         </div> {/* forum */}
       </ForumContext.Provider>
     );

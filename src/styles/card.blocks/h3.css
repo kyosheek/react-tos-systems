@@ -1,15 +1,21 @@
+.h3 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .card__theme {
   position: relative;
   text-align: left;
 
   margin-left: 19px;
-  margin-top: 12px;
+  margin-top: 10px;
 
   font-family: Helvetica Neue;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
-  line-height: 90.2%;
+  line-height: 105%;
   /* or 16px */
 
   color: #444444;
