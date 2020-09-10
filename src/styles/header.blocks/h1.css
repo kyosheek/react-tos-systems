@@ -9,10 +9,17 @@
   color: #282D3C;
 }
 
-.header__logo {
+/* .header__logo {
   position: relative;
   width: 167px;
   height: 66px;
   left: 60px;
   top: 20px;
+} */
+
+.header__logo {
+  flex: 0 0;
+  min-width: 168px;
+  margin-top: 20px;
+  margin-left: 60px;
 }

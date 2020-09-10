@@ -29,6 +29,7 @@ class Forum extends Component {
     return (
       <ForumContext.Provider value={ this.state }>
         <div className="forum">
+          <div />
           <ActionBar />
           <CardsList />
         </div> {/* forum */}

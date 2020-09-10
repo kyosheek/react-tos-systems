@@ -1,6 +1,6 @@
 .header__section-button {
-  position: absolute;
-  top: 64px;
+  /* position: absolute;
+  top: 64px; */
   width: 145px;
 
   font-family: Helvetica;
@@ -21,11 +21,12 @@
 }
 
 .header__section-button:first-of-type {
-  left: 547px;
+  /* left: 547px; */
+  margin-right: 60px;
 }
 
 .header__section-button:nth-of-type(2) {
-  left: 752px;
+  /* left: 752px; */
 }
 
 .header__section-button_selected {

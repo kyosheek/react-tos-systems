@@ -8,9 +8,11 @@ import Card from './Card';
 class CardsList extends Component {
   render() {
     let cardsList = [];
-    for (let key in forumMessages) {
-      let cardData = JSON.parse(JSON.stringify(forumMessages[key]));
-      cardsList.push(<Card key={ key } cardData={ cardData } />);
+    for (let i = 0; i < 11; i++) {
+      for (let key in forumMessages) {
+        let cardData = JSON.parse(JSON.stringify(forumMessages[key]));
+        cardsList.push(<Card key={ i } cardData={ cardData } />);
+      }
     }
 
     return(

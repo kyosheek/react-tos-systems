@@ -1,17 +1,39 @@
 .header {
   position: absolute;
-  width: 1440px;
-  height: 115px;
+  width: 100vw;
+  max-height: 114px;
   left: 0px;
   top: 0px;
+
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .header__background {
   position: absolute;
-  width: 1440px;
+  width: 100vw;
   height: 108px;
+  z-index: -99;
   left: 0px;
   top: 0px;
 
   background: #FFFFFF;
+}
+
+.header__buttons_wrapper {
+  flex: 1 1;
+  min-width: 315px;
+
+  text-align: center;
+  justify-content: center;
+  margin-top: 64px;
+  margin-right: 0;
+
+  display: flex;
+}
+
+@media screen and (min-width: 1200px) {
+  .header__buttons_wrapper {
+    margin-right: 10em;
+  }
 }

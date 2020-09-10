@@ -18,14 +18,15 @@ class Header extends Component {
     }
     return(
       <div className="header">
-          <div className="header__background">
-            <h1 className="h1 header__logo">
-              {`Corporate
-                Communication
-                Service`}
-            </h1> {/* header__logo */}
-            {sectionButtons}
-          </div>
+        <h1 className="h1 header__logo">
+          {`Corporate
+            Communication
+            Service`}
+        </h1> {/* header__logo */}
+        <div className="header__buttons_wrapper">
+          {sectionButtons}
+        </div>
+        <div className="header__background" />
       </div>
     )
   }
