@@ -11,6 +11,8 @@ import Community from './components/Community';
 import { SectionContext } from './context/SectionContext';
 import { SearchContext } from './context/SearchContext';
 
+import { NavbarConsumed } from './context/ConsumedElements';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -64,15 +66,7 @@ class App extends Component {
         <SectionContext.Provider value={ Object.assign({}, this.state.sectionContext) }>
           <Header />
           <SearchContext.Provider value={ Object.assign({}, this.state.searchContext) }>
-            <SectionContext.Consumer>
-              {(sectionContext) => (
-                <SearchContext.Consumer>
-                  {(searchContext) => (
-                    <Navbar sectionContext={ sectionContext } searchContext={ searchContext } />
-                  )}
-                </SearchContext.Consumer>
-              )}
-            </SectionContext.Consumer>
+            <NavbarConsumed />
             { this.renderSection() }
           </SearchContext.Provider>
         </SectionContext.Provider>

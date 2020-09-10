@@ -8,7 +8,6 @@ import { sectionsDict } from '../context/SectionContext';
 
 class Header extends Component {
   render() {
-
     let sectionButtons = [];
     for (let key of Object.keys(sectionsDict)) {
       sectionButtons.push(<SectionButton
@@ -23,7 +22,7 @@ class Header extends Component {
             Communication
             Service`}
         </h1> {/* header__logo */}
-        <div className="header__buttons_wrapper">
+        <div className="header__buttons-wrap">
           {sectionButtons}
         </div>
         <div className="header__background" />

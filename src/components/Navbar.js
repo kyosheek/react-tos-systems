@@ -8,7 +8,7 @@ import { sectionsDict } from '../context/SectionContext';
 
 class Navbar extends Component {
   render() {
-      const sectionName = sectionsDict[this.props.sectionContext.selectedSectionId];
+    const sectionName = sectionsDict[this.props.sectionContext.selectedSectionId];
     const { searchString, handleSearch } = this.props.searchContext;
 
     return(

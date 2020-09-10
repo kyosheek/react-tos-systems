@@ -20,7 +20,7 @@
   background: #FFFFFF;
 }
 
-.header__buttons_wrapper {
+.header__buttons-wrap {
   flex: 1 1;
   min-width: 315px;
 
@@ -33,7 +33,7 @@
 }
 
 @media screen and (min-width: 850px) {
-  .header__buttons_wrapper {
+  .header__buttons-wrap {
     margin-right: 10em;
   }
 }

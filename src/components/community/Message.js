@@ -19,11 +19,11 @@ class Message extends Component {
     return(
       <div className="message">
         <textarea
-          className="input message_msg"
+          className="input message_input-msg"
           placeholder="Поделитесь интересным!"
           maxLength="255"/>
         <input
-          className="input message_name"
+          className="input message_input-name"
           placeholder="Ваше имя"/>
         <button
           className="button message_send">

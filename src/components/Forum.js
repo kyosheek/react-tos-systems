@@ -4,7 +4,7 @@ import '../App.css';
 import '../styles/common.blocks/master.css';
 
 import ActionBar from './forum/ActionBar';
-import CardsList from './forum/CardsList';
+import { CardsListConsumed } from '../context/ConsumedElements';
 
 import { ForumContext } from '../context/ForumContext';
 
@@ -31,7 +31,7 @@ class Forum extends Component {
         <div className="forum">
           <div />
           <ActionBar />
-          <CardsList />
+          <CardsListConsumed />
         </div> {/* forum */}
       </ForumContext.Provider>
     );

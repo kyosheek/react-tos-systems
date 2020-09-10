@@ -40,9 +40,9 @@ class Card extends Component {
 
     const isExpanded = this.state.expanded;
 
-    const buttonStyle = "button card__hide" + (isExpanded ? " card__hide-visible" : "");
-    const textStyle = "p card__text" + (isExpanded ? " card__text-visible" : "");
-    const cardStyle = "button card" + (isExpanded ? " card-expanded" : "");
+    const buttonStyle = "button card__hide" + (isExpanded ? " card__hide_visible" : "");
+    const textStyle = "p card__text" + (isExpanded ? " card__text_visible" : "");
+    const cardStyle = "button card" + (isExpanded ? " card_expanded" : "");
 
     return(
       <React.Fragment>

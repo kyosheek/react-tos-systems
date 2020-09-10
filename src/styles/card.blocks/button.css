@@ -22,10 +22,18 @@
   margin-bottom: 20px;
 }
 
-.card-expanded {
+.card_expanded {
   height: auto;
   position: absolute;
   margin-top: 0px;
   left: 0px;
   top: 0px;
+}
+
+.card__hide {
+
+}
+
+.card__hide_visible {
+  
 }
