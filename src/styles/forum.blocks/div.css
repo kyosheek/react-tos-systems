@@ -3,6 +3,8 @@
   position: relative;
   display: flex;
   margin-top: 40px;
+
+  justify-content: center;
 }
 
 .forum__freespace {
@@ -12,10 +14,5 @@
 @media screen and (max-width: 850px) {
   .forum__freespace {
     display: none;
-  }
-}
-
-@media screen and (max-width: 850px) {
-  .forum {
   }
 }

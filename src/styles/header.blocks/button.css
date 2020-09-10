@@ -33,3 +33,9 @@
   color: #282D3C;
   border-bottom: 5px solid #B89B72;
 }
+
+@media screen and (max-width: 850px) {
+  .header__section-button:first-of-type {
+    margin-right: 1%
+  }
+}

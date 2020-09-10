@@ -9,5 +9,6 @@
 @media screen and (max-width: 850px) {
   .action-bar {
     margin-right: 1em;
+    margin-left: 1em;
   }
 }

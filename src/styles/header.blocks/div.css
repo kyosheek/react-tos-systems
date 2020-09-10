@@ -32,8 +32,9 @@
   display: flex;
 }
 
-@media screen and (min-width: 850px) {
+@media screen and (max-width: 850px) {
   .header__buttons-wrap {
-    margin-right: 10em;
+    margin-right: 1em;
+    margin-left: 10px;
   }
 }
