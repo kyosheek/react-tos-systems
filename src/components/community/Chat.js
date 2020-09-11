@@ -14,13 +14,11 @@ class Chat extends Component {
     for (let key in communityMessages) {
       toSort.push([key, Number(communityMessages[key].when)]);
     }
-    console.log("to sort", toSort); // my del
     toSort.sort((a, b) => (a[1] > b[1]));
-    console.log("after sort", toSort); // my del
     return toSort;
   }
 
-  isIncludes = (messageData, ss) => (messageData.who.includes(ss) || messageData.data.text.includes(ss));
+  isIncludes = (messageData, ss) => (messageData.who.toLowerCase().includes(ss) || messageData.text.toLowerCase().includes(ss));
 
   render() {
     const ss = this.props.searchContext.searchString;
@@ -28,7 +26,6 @@ class Chat extends Component {
     let msgsSorted = this.sortMessages(communityMessages);
     let messagesList = [];
 
-    console.log(msgsSorted); // my del
 
     for (let pair in msgsSorted) {
       let messageData = Object.assign({}, communityMessages[pair[0]]);
