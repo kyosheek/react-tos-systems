@@ -1,6 +1,8 @@
 .message-form {
-  position: absolute;
+  /* position: absolute;
   width: 579px;
   left: 481px;
-  top: 210px;
+  top: 210px; */
+  display: flex;
+  flex-wrap: wrap;
 }

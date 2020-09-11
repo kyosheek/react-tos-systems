@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 
 import '../App.css';
 import '../styles/common.blocks/master.css';
+import '../styles/community.blocks/master.css';
 
-import MessageForm from './community/MessageForm';
+import MessageForm from './common/MessageForm';
 import { ChatConsumed } from '../context/ConsumedElements';
 
 import { SearchContext } from '../context/SearchContext';

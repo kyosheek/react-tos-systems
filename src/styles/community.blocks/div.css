@@ -1,0 +1,32 @@
+.community {
+  display: flex;
+  justify-content: space-around;
+}
+
+.community__content-wrap {
+  flex: 1 1 580px;
+  margin-top: 40px;
+  margin-left: 33vw;
+  margin-right: 380px;
+}
+
+@media screen and (max-width: 1200px) {
+  .community__content-wrap {
+    margin-left: 33vw;
+    margin-right: 220px;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .community__content-wrap {
+    margin-left: 33vw;
+    margin-right: 100px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .community__content-wrap {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+}

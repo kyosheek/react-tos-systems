@@ -2,8 +2,9 @@
   position: relative;
   width: 240px;
   height: 30px;
-  top: 20px;
+  /* top: 20px; */
 
+  margin-top: 20px;
   padding-left: 20px;
 
   font-family: Helvetica;
@@ -14,4 +15,10 @@
   /* or 16px */
 
   color: #858994;
+}
+
+@media screen and (max-width: 850px) {
+  .message-form__input-name {
+    width: 190px;
+  }
 }

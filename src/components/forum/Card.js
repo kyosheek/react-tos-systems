@@ -6,6 +6,8 @@ import Reply from './Reply';
 
 import { tagsDict } from '../../context/ForumContext';
 
+import * as u from '../../Utility';
+
 class Card extends Component {
   constructor(props) {
     super(props);
@@ -17,14 +19,8 @@ class Card extends Component {
 
   render() {
     const { theme, tag, who, when, text, replies } = this.props.cardData;
-    let date = new Date(Number(when));
-    const dateString = `${date.getDate()}.${
-        (date.getMonth() + 1) < 10
-        ? "0" + (date.getMonth() + 1)
-        : (date.getMonth() + 1)}.${date.getFullYear()
-      }
-      в ${date.getHours()}:${date.getSeconds()}`;
 
+    const dateString = u.ParseWhen(when);
     const tagName = tagsDict[tag];
 
     const repliesLength = String(Object.keys(replies).length);
