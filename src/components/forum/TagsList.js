@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import '../../styles/tagsList.blocks/master.css';
+import '../../styles/tags-list.blocks/master.css';
 
 import Tag from './Tag';
 

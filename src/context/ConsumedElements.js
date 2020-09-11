@@ -3,6 +3,8 @@ import React from 'react';
 import CardsList from '../components/forum/CardsList';
 import Navbar from '../components/Navbar';
 
+import Chat from '../components/community/Chat';
+
 import { ForumContext } from './ForumContext';
 import { SearchContext } from './SearchContext';
 import { SectionContext } from './SectionContext';
@@ -34,3 +36,13 @@ export const CardsListConsumed = () => {
     </SearchContext.Consumer>
   );
 };
+
+export const ChatConsumed = () => {
+  return (
+    <SearchContext.Consumer>
+      {(searchContext) => (
+        <Chat searchContext={ searchContext } />
+      )}
+    </SearchContext.Consumer>
+  )
+}

@@ -1,37 +1,34 @@
 import React, { Component } from 'react';
 
-import '../../styles/message.blocks/master.css';
+import '../../styles/chat.blocks/master.css';
 
-class MessageForm extends Component {
-  constructor(props) {
-    super(props);
+import Message from '../common/Message';
 
-    this.state = {
-      message: '',
-      name: ''
-    }
-  }
+import { SearchContext } from '../../context/SearchContext';
 
-  handleChange = (e) => {
-  }
+import { communityMessages } from '../../data/community';
+
+class Chat extends Component {
+
 
   render() {
-    return(
-      <div className="message">
-        <textarea
-          className="input message_input-msg"
-          placeholder="Поделитесь интересным!"
-          maxLength="255"/>
-        <input
-          className="input message_input-name"
-          placeholder="Ваше имя"/>
-        <button
-          className="button message_send">
-          Отправить
-        </button>
-      </div>
-    )
+    const ss = this.props.searchContext.searchString;
+
+    let messagesList = [];
+
+    for (let key in communityMessages) {
+      let messageData = Object.assign({}, communityMessages[key]);
+      messagesList.push(<Message key={ key } messageData={ messageData } />);
+    }
+
+    return (
+      <div className="chat">
+        {messagesList}
+      </div> // forum
+    );
   }
 }
 
-export default MessageForm;
+Chat.context = SearchContext;
+
+export default Chat;

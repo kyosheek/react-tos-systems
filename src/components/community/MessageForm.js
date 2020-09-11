@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import '../../styles/message.blocks/master.css';
+import '../../styles/message-form.blocks/master.css';
 
 class MessageForm extends Component {
   constructor(props) {
@@ -17,16 +17,16 @@ class MessageForm extends Component {
 
   render() {
     return(
-      <div className="message">
+      <div className="message-form">
         <textarea
-          className="input message_input-msg"
+          className="input message-form__input-msg"
           placeholder="Поделитесь интересным!"
           maxLength="255"/>
         <input
-          className="input message_input-name"
+          className="input message-form__input-name"
           placeholder="Ваше имя"/>
         <button
-          className="button message_send">
+          className="button message-form__send">
           Отправить
         </button>
       </div>

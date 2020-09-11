@@ -9,7 +9,7 @@ import { forumMessages } from '../../data/forum';
 import Card from './Card';
 
 class CardsList extends Component {
-  isIncludes = (cardData, ss) => (cardData.theme.toLowerCase().includes(ss) || cardData.who.toLowerCase().includes(ss) || cardData.text.toLowerCase().includes(ss));
+  isIncludes = (cardData, ss) => (cardData.theme.toLowerCase().includes(ss) || cardData.who.toLowerCase().includes(ss));
 
   render() {
     const ss = this.props.searchContext.searchString;
@@ -34,7 +34,5 @@ class CardsList extends Component {
     )
   }
 }
-
-CardsList.context = ForumContext;
 
 export default CardsList;
