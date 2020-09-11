@@ -39,7 +39,8 @@ class App extends Component {
   }
 
   handleSearch = (e) => {
-    const { name, value } = e.target;
+    let { name, value } = e.target;
+    value = value.replace(/(\r\n|\n|\r)/gm, "");
     let searchContextCopy = Object.assign({}, this.state.searchContext);
     searchContextCopy[name] = value;
     this.setState({

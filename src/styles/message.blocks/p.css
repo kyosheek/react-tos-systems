@@ -8,6 +8,10 @@
 
 .message__info {
   color: #858994;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .message__msg-wrap_msg {

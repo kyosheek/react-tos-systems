@@ -11,8 +11,8 @@ import { communityMessages } from '../../data/community';
 class Chat extends Component {
   sortMessages = (msgs) => {
     let toSort = [];
-    for (let key in communityMessages) {
-      toSort.push([key, Number(communityMessages[key].when)]);
+    for (let key in msgs) {
+      toSort.push([key, Number(msgs[key].when)]);
     }
     toSort.sort((a, b) => (a[1] > b[1]));
     return toSort;
@@ -23,12 +23,20 @@ class Chat extends Component {
   render() {
     const ss = this.props.searchContext.searchString;
 
-    let msgsSorted = this.sortMessages(communityMessages);
+    let cms = undefined;
+    cms = localStorage.getItem("communityMessages");
+    if (cms) {
+      cms = JSON.parse(cms);
+    } else {
+      localStorage.setItem("communityMessages", JSON.stringify(communityMessages));
+      cms = JSON.parse(localStorage.getItem("communityMessages"));
+    }
+
+    let msgsSorted = this.sortMessages(cms);
     let messagesList = [];
 
-
     for (let pair in msgsSorted) {
-      let messageData = Object.assign({}, communityMessages[pair[0]]);
+      let messageData = Object.assign({}, cms[pair[0]]);
       if ((ss.length === 0) || this.isIncludes(messageData, ss)) {
         messagesList.unshift(<Message key={ pair[0] } messageData={ messageData } />);
       }

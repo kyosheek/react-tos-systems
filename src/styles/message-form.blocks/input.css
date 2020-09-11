@@ -1,11 +1,11 @@
 .message-form__input-name {
   position: relative;
-  width: 240px;
   height: 30px;
   /* top: 20px; */
 
   margin-top: 20px;
   padding-left: 20px;
+  padding-right: 20px;
 
   font-family: Helvetica;
   font-style: normal;
@@ -14,6 +14,11 @@
   line-height: 105%;
   /* or 16px */
 
+  color: #333333;
+  max-width: 23ch;
+}
+
+.message-form__input-name::placeholder {
   color: #858994;
 }
 
