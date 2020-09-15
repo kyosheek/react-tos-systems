@@ -51,7 +51,7 @@ class Community extends Component {
             values={ values } />
           <ChatConsumed />
         </div>
-      </div> // forum
+      </div>
     );
   }
 }

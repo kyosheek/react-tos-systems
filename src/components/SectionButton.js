@@ -10,7 +10,7 @@ class SectionButton extends Component {
     return(
       <button
         className={style}
-        onClick={() => changeSection(sectionId)}>
+        onClick={ () => changeSection(sectionId) }>
         {sectionName}
       </button>
     )

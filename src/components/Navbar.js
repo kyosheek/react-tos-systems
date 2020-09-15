@@ -14,13 +14,13 @@ class Navbar extends Component {
     return(
       <div className="navbar">
         <h1 className="h1 navbar__location">
-          {sectionName}
-        </h1> {/* navbar__location */}
+          { sectionName }
+        </h1>
         <div className="navbar__input-div">
           <img
             className="img navbar__img"
-            src={magnifier_glass}
-            alt="Q"/>
+            src={ magnifier_glass}
+            alt="Q" />
           <input
             className="input navbar__input"
             placeholder="Поиск по разделу"
@@ -31,8 +31,8 @@ class Navbar extends Component {
               handleSearch(e);
             }}
             />
-        </div> {/* navbar__input-div */}
-      </div> //navbar
+        </div>
+      </div>
     )
   }
 }

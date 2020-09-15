@@ -39,8 +39,8 @@ class Card extends Component {
       }};
 
       Object.assign(repliesCopy, o);
-      Object.assign(threadCopy, {replies: repliesCopy});
-      Object.assign(lsmsgs, {[cid]: threadCopy});
+      Object.assign(threadCopy, { replies: repliesCopy });
+      Object.assign(lsmsgs, { [cid]: threadCopy });
       localStorage.setItem("forumMessages", JSON.stringify(lsmsgs));
     }
   }
@@ -107,9 +107,8 @@ class Card extends Component {
             { this.state.expanded && <p className={ textStyle }>{ text }</p> }
             <p className="p card__tag">{ tagName }</p>
             <p className="p card__replies">{`${repliesLength} ${repliesWord}`}</p>
-        </button> {/* card */}
+        </button>
         { this.state.expanded && this.renderExpanded() }
-        {/* <Replies /> */}
       </React.Fragment>
     )
   }

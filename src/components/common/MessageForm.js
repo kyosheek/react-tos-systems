@@ -9,7 +9,7 @@ class MessageForm extends Component {
     this.state = {
       message: '',
       name: ''
-    }
+    };
   }
 
   handleChange = (e) => {

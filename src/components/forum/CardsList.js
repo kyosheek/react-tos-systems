@@ -43,8 +43,8 @@ class CardsList extends Component {
 
     return(
       <div className="cards-list">
-          {cardsList}
-      </div> /* cards-list */
+          { cardsList }
+      </div>
     )
   }
 }

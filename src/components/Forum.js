@@ -21,7 +21,7 @@ class Forum extends Component {
         selectedTagId: 0,
         changeTag: this.changeTag
       }
-    }
+    };
   }
 
   changeTag = (tagId) => {
@@ -30,7 +30,7 @@ class Forum extends Component {
     this.setState({
       ...this.state,
       forumContext: forumContextCopy
-    })
+    });
   }
 
   newThreadClick = (boo) => {
@@ -42,20 +42,20 @@ class Forum extends Component {
 
   createThread = () => {
     const placeholder = "Введите ваше сообщение!";
-    if (this.state.creatingThread) return <NewThreadForm placeholder={ placeholder } />
+    if (this.state.creatingThread) return (<NewThreadForm placeholder={ placeholder } />);
     else return true;
   }
 
   render() {
     return (
       <ForumContext.Provider value={ Object.assign({}, this.state.forumContext) }>
-        { (this.state.creatingThread && <NewThreadForm newThreadClick={ this.newThreadClick }/>) || (
+        { (this.state.creatingThread && <NewThreadForm newThreadClick={ this.newThreadClick } />) || (
             <div className="forum">
               <div className="forum__freespace"/>
               <CardsListConsumed />
               <ForumContext.Consumer>
                 {(forumContext) => (
-                  <ActionBar forumContext={ forumContext } newThreadClick={ this.newThreadClick }/>
+                  <ActionBar forumContext={ forumContext } newThreadClick={ this.newThreadClick } />
                 )}
               </ForumContext.Consumer>
             </div>

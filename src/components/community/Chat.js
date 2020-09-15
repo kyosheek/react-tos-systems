@@ -45,7 +45,7 @@ class Chat extends Component {
     return (
       <div className="chat">
         { messagesList }
-      </div> // forum
+      </div>
     );
   }
 }

@@ -13,11 +13,7 @@ class NewThreadForm extends Component {
       text: '',
       tag: 0,
       name: ''
-    }
-  }
-
-  static defaultProps = {
-    doForceUpdate: () => {}
+    };
   }
 
   handleChange = (e) => {
@@ -34,11 +30,11 @@ class NewThreadForm extends Component {
   createOptions = () => {
     let options = [];
 
-    options.push(<option key={-1} value="0" disabled hidden>Выберите ярлык</option>);
+    options.push(<option key={ -1 } value="0" disabled hidden>Выберите ярлык</option>);
     for (let key of Object.keys(tagsDict)) {
       if (Number(key) === 0) continue;
       const text = tagsDict[key];
-      options.push(<option key={key} value={key}>{text}</option>);
+      options.push(<option key={ key } value={ key }>{ text }</option>);
     }
     return options;
   }
@@ -61,13 +57,12 @@ class NewThreadForm extends Component {
       const keys = Object.keys(lsmsgs);
       const lkey = Number(keys[keys.length - 1]) + 1;
 
-      Object.assign(lsmsgs, {[lkey]: o});
+      Object.assign(lsmsgs, { [lkey]: o });
       localStorage.setItem("forumMessages", JSON.stringify(lsmsgs));
     }
   }
 
   render() {
-    const data = Object.assign({}, this.state);
     return(
       <div className="new-thread-form">
         <input
@@ -102,16 +97,13 @@ class NewThreadForm extends Component {
           onChange={ this.handleChange }
           value={ this.state.tag }
           required>
-          {this.createOptions()}
+          { this.createOptions() }
         </select>
         <button
           className="button new-thread-form__send"
           onClick={ () => {
             this.createThread();
             this.props.newThreadClick(false);
-            // if (this.props.doForceUpdate()) {
-            //   this.props.doForceUpdate();
-            // }
           }}>
           Создать
         </button>

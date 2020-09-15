@@ -10,10 +10,8 @@ class Tag extends Component {
 
     this.state = {
       id: undefined
-    }
+    };
   }
-
-  // Lifecycle methods ----------------------------------------------------------------
 
   static getDerivedStateFromProps = (props, state) => {
     const newState = {
@@ -33,8 +31,8 @@ class Tag extends Component {
       {({selectedTagId, changeTag}) => (
         <div className="tag-wrap">
           <button
-            className={tagClass}
-            onClick={() => changeTag(tagId)}>
+            className={ tagClass }
+            onClick={ () => changeTag(tagId) }>
             { text }
           </button>
         </div>

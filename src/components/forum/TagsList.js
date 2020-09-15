@@ -12,7 +12,7 @@ class TagsList extends Component {
 
     for (let key of Object.keys(tagsDict)) {
       const text = tagsDict[key];
-      tags.push(<Tag selectedTag="0" key={key} tagId={key} text={text} />);
+      tags.push(<Tag selectedTag="0" key={ key } tagId={ key } text={ text } />);
     }
 
     return(
@@ -20,8 +20,8 @@ class TagsList extends Component {
         <h2 className="tags-list__header">
           Ярлыки
         </h2>
-        {tags}
-      </div> /* tags-list */
+        { tags }
+      </div>
     )
   }
 }

@@ -20,7 +20,7 @@ class Message extends Component {
             { text }
           </p>
         </div>
-      </div> // message
+      </div>
     );
   }
 }

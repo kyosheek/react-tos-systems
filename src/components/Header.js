@@ -11,9 +11,9 @@ class Header extends Component {
     let sectionButtons = [];
     for (let key of Object.keys(sectionsDict)) {
       sectionButtons.push(<SectionButton
-                          key={key}
-                          sectionId={key}
-                          sectionName={sectionsDict[key]}/>);
+                          key={ key }
+                          sectionId={ key }
+                          sectionName={ sectionsDict[key] } />);
     }
     return(
       <div className="header">
@@ -21,7 +21,7 @@ class Header extends Component {
           {`Corporate
             Communication
             Service`}
-        </h1> {/* header__logo */}
+        </h1>
         <div className="header__buttons-wrap">
           {sectionButtons}
         </div>

@@ -5,6 +5,7 @@ export const ParseWhen = (when) => {
         year = date.getFullYear(),
         hours = date.getHours(),
         seconds = date.getSeconds();
+        
   const dateString = `${day < 10 ? '0' + day : day}.${
                         month < 10 ? '0' + month : month}.${
                         year} в ${
