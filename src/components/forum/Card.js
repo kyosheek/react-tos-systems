@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 import '../../styles/card.blocks/master.css';
 
-import Reply from './Reply';
+import MessageForm from '../common/MessageForm';
+import Message from '../common/Message';
 
 import { tagsDict } from '../../context/ForumContext';
 
@@ -15,6 +16,59 @@ class Card extends Component {
     this.state = {
       expanded: false
     };
+  }
+
+  sendMessage = (data) => {
+    const { message, name } = data;
+    const { cid } = this.props;
+
+    if (message.length !== 0 && name.length !== 0) {
+      let lsmsgs = JSON.parse(localStorage.getItem("forumMessages"));
+
+      let threadCopy = Object.assign({}, lsmsgs[Number(this.props.cid)]);
+      let repliesCopy = Object.assign({}, threadCopy.replies);
+      const keys = Object.keys(repliesCopy);
+      let lkey = Number(keys[keys.length - 1]);
+      lkey += 1;
+
+      let now = new Date();
+      const o = { [lkey]: {
+        text: message,
+        who: name,
+        when: now.getTime()
+      }};
+
+      Object.assign(repliesCopy, o);
+      Object.assign(threadCopy, {replies: repliesCopy});
+      Object.assign(lsmsgs, {[cid]: threadCopy});
+      localStorage.setItem("forumMessages", JSON.stringify(lsmsgs));
+    }
+  }
+
+  renderExpanded = () => {
+    const { replies } = this.props.cardData;
+
+    let messagesList = [];
+
+    for (let key in replies) {
+      let messageData = Object.assign({}, replies[key]);
+      messagesList.unshift(<Message key={ key } messageData={ messageData } />);
+    }
+
+    const values = {
+      placeholder: "Оставьте комментарий!",
+      maxlength: "-1"
+    }
+
+    return (
+      <React.Fragment>
+        <MessageForm
+          doForceUpdate={ this.props.doForceUpdate }
+          sendMessage={ this.sendMessage }
+          values={ values } />
+        { messagesList }
+      </React.Fragment>
+    )
   }
 
   render() {
@@ -36,7 +90,6 @@ class Card extends Component {
 
     const isExpanded = this.state.expanded;
 
-    const buttonStyle = "button card__hide" + (isExpanded ? " card__hide_visible" : "");
     const textStyle = "p card__text" + (isExpanded ? " card__text_visible" : "");
     const cardStyle = "button card" + (isExpanded ? " card_expanded" : "");
 
@@ -50,13 +103,12 @@ class Card extends Component {
             })
           }}>
             <p className="p card__info">{`Создал ${who} ${dateString}`}</p>
-            {/* <button className="button card__hide">-</button> */}
             <h3 className="h3 card__theme">{ theme }</h3>
             { this.state.expanded && <p className={ textStyle }>{ text }</p> }
             <p className="p card__tag">{ tagName }</p>
             <p className="p card__replies">{`${repliesLength} ${repliesWord}`}</p>
         </button> {/* card */}
-        { this.state.expanded && <Reply replies={ replies } /> }
+        { this.state.expanded && this.renderExpanded() }
         {/* <Replies /> */}
       </React.Fragment>
     )

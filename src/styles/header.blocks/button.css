@@ -31,7 +31,7 @@
 
 .header__section-button_selected {
   color: #282D3C;
-  border-bottom: 5px solid #B89B72;
+  border-bottom: 6px solid #B89B72;
 }
 
 @media screen and (max-width: 850px) {

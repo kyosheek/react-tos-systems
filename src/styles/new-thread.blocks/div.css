@@ -1,0 +1,15 @@
+.new-thread-form {
+  display: flex;
+  flex-wrap: wrap;
+
+  flex: 1 1 580px;
+  margin-left: 34vw;
+  margin-right: 26vw;
+}
+
+@media screen and (max-width: 1040px) {
+  .new-thread-form {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+}

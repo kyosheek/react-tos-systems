@@ -21,36 +21,15 @@ class MessageForm extends Component {
     });
   }
 
-  sendMessage = () => {
-    const { message, name } = this.state;
-
-    if (message.length !== 0 && name.length !== 0) {
-      let lsmsgs = JSON.parse(localStorage.getItem("communityMessages"));
-
-      const keys = Object.keys(lsmsgs);
-      let lkey = Number(keys[keys.length - 1]);
-      lkey += 1;
-
-      let now = new Date();
-
-      const o = { [lkey]: {
-        text: message,
-        who: name,
-        when: now.getTime()
-      }};
-      lsmsgs = {...lsmsgs, ...o};
-      localStorage.setItem("communityMessages", JSON.stringify(lsmsgs));
-      this.props.doForceUpdate();
-    }
-  }
-
   render() {
+    const text = this.props.values;
+    const data = Object.assign({}, this.state);
     return(
       <div className="message-form">
         <textarea
           className="input message-form__input-msg"
-          placeholder="Поделитесь интересным!"
-          maxLength="255"
+          placeholder={ text.placeholder }
+          maxLength={ text.maxlength }
           name="message"
           onChange={ this.handleChange }
           value={ this.state.message || ""}/>
@@ -63,7 +42,16 @@ class MessageForm extends Component {
           value={ this.state.name || "" }/>
         <button
           className="button message-form__send"
-          onClick={ this.sendMessage }>
+          onClick={ () => {
+            this.props.sendMessage(data) ;
+            if (this.props.doForceUpdate()) {
+              this.props.doForceUpdate();
+            }
+            this.setState({
+              ...this.state,
+              message: ''
+            })
+          }}>
           Отправить
         </button>
       </div>

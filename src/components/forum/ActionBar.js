@@ -8,7 +8,11 @@ class ActionBar extends Component {
   render() {
     return(
       <div className="action-bar">
-        <button className="button action-bar__new-thread">
+        <button
+          className="button action-bar__new-thread"
+          onClick={() => {
+            this.props.newThreadClick(true);
+          }}>
           Новая ветка
         </button>
         <TagsList />

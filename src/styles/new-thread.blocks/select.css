@@ -1,0 +1,17 @@
+.new-thread-form__select-tag {
+  margin-top: 20px;
+  margin-left: auto;
+
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+
+  color:  #333333;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.new-thread-form__select-tag:hidden {
+  color: #858994;
+}

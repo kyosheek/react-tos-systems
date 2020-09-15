@@ -4,7 +4,6 @@ import './App.css';
 import './styles/common.blocks/master.css';
 
 import Header from './components/Header';
-import Navbar from './components/Navbar';
 import Forum from './components/Forum';
 import Community from './components/Community';
 

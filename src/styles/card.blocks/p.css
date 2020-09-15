@@ -65,10 +65,10 @@
 
 .card__text {
   position: relative;
-  width: 540px;
   text-align: left;
 
   margin-top: 20px;
+  margin-right: 20px;
   margin-left: 20px;
   margin-bottom: 9px;
 
@@ -81,6 +81,10 @@
   color: #222222;
 
   visibility: hidden;
+
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
 }
 
 .card__text_visible {
